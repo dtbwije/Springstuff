@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/org.java.spring-beans.xsd
+    http://www.springframework.org/schema/context/">
+
+
+    <bean id="opBean"  class="org.java.org.java.spring.aspectj.annotation.Operation"/>
+    <bean id="trackMyBean" class="org.java.org.java.spring.aspectj.annotation.Track"/>
+    <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"/>
+</beans>

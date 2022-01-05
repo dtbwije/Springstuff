@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/org.java.spring-beans.xsd">
+
+    <bean id="customerService" class="org.java.org.java.spring.aspectj.CustomerService">
+        <property name="name" value="Test Name"/>
+        <property name="age" value="26 "/>
+        <property name="url" value="www.test.com"/>
+    </bean>
+
+    <bean id="hijackBeforeMethodBean" class="org.java.org.java.spring.aspectj.HijackBeforeClass"/>
+    <bean id="hijackAll" class="org.java.org.java.spring.aspectj.HijackAroundMethod"/>
+
+    <bean id="customerServiceProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="customerService"/>
+        <property name="interceptorNames">
+            <list>
+                <value>hijackBeforeMethodBean</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="customerServiceProxyForAll" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="customerService"/>
+        <property name="interceptorNames">
+            <list>
+                <value>hijackAll</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>
