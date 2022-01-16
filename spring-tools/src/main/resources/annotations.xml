@@ -3,10 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/org.java.spring-beans.xsd
-    http://www.springframework.org/schema/context/">
+    http://www.springframework.org/schema/context/
+    http://www.springframework.org/schema/context/org.java.spring-context.xsd">
 
 
-    <bean id="opBean"  class="org.java.org.java.spring.aspectj.annotation.Operation"/>
-    <bean id="trackMyBean" class="org.java.org.java.spring.aspectj.annotation.Track"/>
+    <bean id="opBean"  class="org.java.spring.aspectj.annotation.Operation"/>
+    <bean id="trackMyBean" class="org.java.spring.aspectj.annotation.Track"/>
     <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"/>
 </beans>

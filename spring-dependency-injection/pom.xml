@@ -9,9 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.java.spring</groupId>
-	<artifactId>springboot</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<name>springboot</name>
+	<artifactId>spring-dependency-injection</artifactId>
+	<name>spring-dependency-injection</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
