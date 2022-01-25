@@ -16,8 +16,8 @@
 				</div>
 				<!-- branding -->
 				<ul class="navbar">
-					<li><a href="#">home</a></li>
-					<li><a href="#">search</a></li>
+					<li><a href="/home">home</a></li>
+					<li><a href="/goToSearch">search</a></li>
 					<li><a href="#">linkedIn</a></li>
 				</ul>
 				<!-- navbar -->
@@ -30,7 +30,6 @@
   </div>container tagline -->
 	</header>
 	<!-- #home -->
-
     <span class="success">${dataSaved}</span>
    	<section id="login" class="section">
 		<div class="container tagline">

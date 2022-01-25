@@ -10,5 +10,6 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository extends CrudRepository<User, Integer> {
 
     @Query("select u from User u where u.username= :name")
-    public User searchByName(@Param("name") String userName);
+    public User searchByName(@Param("name") String username);
+
 }

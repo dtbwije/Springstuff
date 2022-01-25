@@ -30,4 +30,9 @@ public class LoginController {
         System.out.println("in exception handler of Login Controller");
         return "error";
     }
+
+    @ModelAttribute("login")
+    public Login getDefaultLogin(){
+        return new Login();
+    }
 }

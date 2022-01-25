@@ -1,5 +1,6 @@
 package org.java.spring.hplusapp.controllers;
 
+import org.java.spring.hplusapp.beans.Login;
 import org.java.spring.hplusapp.beans.User;
 import org.java.spring.hplusapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,5 +43,10 @@ public class RegistrationController {
         userRepository.save(user);
         model.addAttribute("dataSaved", "User saved successfully");
         return "login";
+    }
+
+    @ModelAttribute("login")
+    public Login getDefaultLogin(){
+        return new Login();
     }
 }
