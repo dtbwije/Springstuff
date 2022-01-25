@@ -1,10 +1,12 @@
 package org.java.spring.hplusapp.controllers;
 
+import org.java.spring.hplusapp.beans.Login;
 import org.java.spring.hplusapp.beans.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
+import java.lang.management.LockInfo;
 import java.util.Arrays;
 import java.util.List;
 
@@ -45,5 +47,8 @@ public class HomeController {
         return Arrays.asList(new String[] {"Male","Female","Other"});
     }
 
-
-}
+    @ModelAttribute("login")
+    public Login getDefaultLogin(){
+        return new Login();
+    }
+ }
