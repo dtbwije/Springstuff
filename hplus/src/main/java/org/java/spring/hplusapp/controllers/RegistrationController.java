@@ -45,8 +45,4 @@ public class RegistrationController {
         return "login";
     }
 
-    @ModelAttribute("login")
-    public Login getDefaultLogin(){
-        return new Login();
-    }
 }
