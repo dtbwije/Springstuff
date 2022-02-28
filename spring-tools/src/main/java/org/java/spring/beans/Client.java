@@ -4,9 +4,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Client {
 
-    public static void main(String... s){
+    public static void main(String... s) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("employeebean.xml");
-        Employee e1 = context.getBean("employee",Employee.class);
+        Employee e1 = context.getBean("employee", Employee.class);
 
         System.out.println(e1);
 

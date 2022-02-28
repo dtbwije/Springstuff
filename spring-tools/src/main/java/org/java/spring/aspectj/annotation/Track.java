@@ -8,12 +8,12 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class Track {
     @Pointcut("execution(* Operation.m*(..))")
-    public void k(){ // pointcut name
+    public void k() { // pointcut name
 
     }
 
     @Before("k()")//applying pointcut on before advice
-    public void myAdvice(JoinPoint jp){
+    public void myAdvice(JoinPoint jp) {
         System.out.println("Additional concern");
         //System.out.println("Method Signature :"+ jp.getSignature());
     }

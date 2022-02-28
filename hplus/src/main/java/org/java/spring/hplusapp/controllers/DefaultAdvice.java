@@ -20,16 +20,16 @@ public class DefaultAdvice {
 
     @ModelAttribute("genderItems")
     public List<String> getGenderItems() {
-        return Arrays.asList(new String[] {"Male","Female","Other"});
+        return Arrays.asList(new String[]{"Male", "Female", "Other"});
     }
 
     @ModelAttribute("login")
-    public Login getDefaultLogin(){
+    public Login getDefaultLogin() {
         return new Login();
     }
 
     @ExceptionHandler(ApplicationException.class)
-    public String handleException(){
+    public String handleException() {
         System.out.println("in exception handler of Login Controller");
         return "error";
     }

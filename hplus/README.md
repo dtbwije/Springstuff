@@ -3,7 +3,6 @@ README
 
 ## Setup mysql docker db with access and users.
 
-
 - create a user
 
 ```roomsql
@@ -18,6 +17,7 @@ mysql> GRANT ALL ON hplus.* TO 'nilu'@'172.17.0.1'  WITH GRANT OPTION;
 Query OK, 0 rows affected (0.01 sec)
 flush privileges;
 ```
+
 - create Data
 
 ```roomsql

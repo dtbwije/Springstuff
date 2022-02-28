@@ -4,6 +4,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Technologies {
+    private int techId;
+    private String techName;
+
     public int getTechId() {
         return techId;
     }
@@ -19,7 +22,4 @@ public class Technologies {
                 ", techName='" + techName + '\'' +
                 '}';
     }
-
-    private int techId;
-    private String techName;
 }

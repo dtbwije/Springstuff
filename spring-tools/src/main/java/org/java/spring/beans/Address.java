@@ -2,6 +2,12 @@ package org.java.spring.beans;
 
 public class Address {
 
+    private String houseNumber;
+    private String street1;
+    private String street2;
+    private String city;
+    private String postalCode;
+
     public String getHouseNumber() {
         return houseNumber;
     }
@@ -52,11 +58,5 @@ public class Address {
                 ", postalCode='" + postalCode + '\'' +
                 '}';
     }
-
-    private String houseNumber;
-    private String street1;
-    private String street2;
-    private String city;
-    private String postalCode;
 
 }

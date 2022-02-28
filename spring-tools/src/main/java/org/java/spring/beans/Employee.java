@@ -2,23 +2,28 @@ package org.java.spring.beans;
 
 public class Employee {
 
-    public Employee(){
+    private int eid;
+    private String eName;
+    private String eSalary;
+    private Address address;
+
+    public Employee() {
         System.out.println("--Object created--");
     }
 
-    public Employee(Address addr){
+    public Employee(Address addr) {
         System.out.println("--set by the Constructor--");
         this.address = addr;
         System.out.println("--Object created--");
     }
 
-    public void setAddress(Address address){
-        System.out.println("--Address set by the setter--");
-        this.address = address;
-    }
-
     public Address getAddress() {
         return this.address;
+    }
+
+    public void setAddress(Address address) {
+        System.out.println("--Address set by the setter--");
+        this.address = address;
     }
 
     public int getEid() {
@@ -45,16 +50,13 @@ public class Employee {
         this.eSalary = eSalary;
     }
 
-    public void  init(){
+    public void init() {
         System.out.println("Created");
     }
-
 
     public void destroy() {
         System.out.println("Destroyed.");
     }
-
-    private int eid;
 
     @Override
     public String toString() {
@@ -65,8 +67,4 @@ public class Employee {
                 ", address=" + address +
                 '}';
     }
-
-    private String eName;
-    private String eSalary;
-    private Address address;
 }

@@ -9,10 +9,10 @@ import javax.servlet.ServletRegistration;
 public class AppInitializer implements WebApplicationInitializer {
     @Override
     public void onStartup(javax.servlet.ServletContext servletContext) {
-    //boot strap the dispatcher  servlet
+        //boot strap the dispatcher  servlet
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.register(ApplicationConfig.class);
-        ServletRegistration.Dynamic servletRegistration = servletContext.addServlet("mvc",new DispatcherServlet(context));
+        ServletRegistration.Dynamic servletRegistration = servletContext.addServlet("mvc", new DispatcherServlet(context));
         servletRegistration.setLoadOnStartup(1);
         servletRegistration.addMapping("/");
 

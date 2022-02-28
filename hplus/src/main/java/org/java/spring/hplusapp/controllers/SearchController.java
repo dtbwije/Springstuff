@@ -19,14 +19,14 @@ public class SearchController {
     private ProductRepository productRepository;
 
     @GetMapping("/search")
-    public Callable<String> search(@RequestParam("search") String search, Model model, HttpServletRequest request){
+    public Callable<String> search(@RequestParam("search") String search, Model model, HttpServletRequest request) {
         System.out.println("in search controller..!" + search);
-        System.out.println("Is async supported : "+ request.isAsyncSupported());
-        System.out.println("Async thread name"+Thread.currentThread().getName());
+        System.out.println("Is async supported : " + request.isAsyncSupported());
+        System.out.println("Async thread name" + Thread.currentThread().getName());
 
         return () -> {
             Thread.sleep(3000);
-            List<Product> products =  productRepository.searchByName(search);
+            List<Product> products = productRepository.searchByName(search);
             System.out.println("in search controller..!" + search);
             model.addAttribute("products", products);
             System.out.println("in search controller..!" + products.size());

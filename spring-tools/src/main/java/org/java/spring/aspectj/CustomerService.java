@@ -2,6 +2,10 @@ package org.java.spring.aspectj;
 
 public class CustomerService {
 
+    private String name;
+    private String url;
+    private Integer age;
+
     public String getName() {
         return name;
     }
@@ -26,20 +30,16 @@ public class CustomerService {
         this.age = age;
     }
 
-    public void printURL(){
+    public void printURL() {
         System.out.println(url);
     }
 
-    public void printName(){
+    public void printName() {
         System.out.println(name);
     }
 
-    public Integer printAge(){
+    public Integer printAge() {
         System.out.println(age);
         return age;
     }
-
-    private String name;
-    private String url;
-    private Integer age;
 }

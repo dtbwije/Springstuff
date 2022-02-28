@@ -7,6 +7,12 @@ import org.springframework.stereotype.Component;
 public class Customers {
 
 
+    private int customerId;
+    private String customerName;
+    private String courseName;
+    @Autowired
+    private Technologies technologies;
+
     public int getCustomerId() {
         return customerId;
     }
@@ -30,13 +36,6 @@ public class Customers {
     public void setCourseName(String courseName) {
         this.courseName = courseName;
     }
-
-    private int customerId;
-    private String customerName;
-    private String courseName;
-
-    @Autowired
-    private Technologies technologies;
 
     @Override
     public String toString() {

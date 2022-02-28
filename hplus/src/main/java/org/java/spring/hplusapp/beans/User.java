@@ -13,9 +13,9 @@ public class User {
 
     @Id
     @Column(columnDefinition = "serial")
-    private int id=1;
+    private int id = 1;
 
-    @Size(min=6, message = "{Username.can.not.be.less.than.6.characters}")
+    @Size(min = 6, message = "{Username.can.not.be.less.than.6.characters}")
     private String username;
 
     @Pattern(regexp = "((?=.*[A-Z]).{6,10})", message = "Password must have one upper case, one lower case and should be between 6 and 10 characters")

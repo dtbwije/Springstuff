@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
-    public static void main(String... a){
+    public static void main(String... a) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("annotations.xml");
 
         Operation operation = (Operation) applicationContext.getBean("opBean");
