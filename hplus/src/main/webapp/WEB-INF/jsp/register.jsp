@@ -18,9 +18,11 @@
 				</div>
 				<!-- branding -->
 				<ul class="navbar">
-					<li><a href="/home">home</a></li>
-					<li><a href="/goToSearch">search</a></li>
-					<li><a href="">linkedIn</a></li>
+                <li><a href="/home">home</a></li>
+                <li><a href="/goToLogin">login</a></li>
+                <li><a href="/goToSearch">search</a></li>
+                <li><a href="redirect">linkedin</a></li>
+                <li><a href="/logout"> logout</a><li>
 
 				</ul>
 				<!-- navbar -->
