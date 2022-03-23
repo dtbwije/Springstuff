@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 @SessionAttributes("login")
 public class LoginController {
@@ -18,7 +20,8 @@ public class LoginController {
     private UserRepository userRepository;
 
     @PostMapping("/login")
-    public String login(@ModelAttribute("login") Login login) throws ApplicationException {
+    public String login(@ModelAttribute("login") Login login, HttpSession session) throws ApplicationException {
+
         User user = userRepository.searchByName(login.getUsername());
         if (user == null) {
             throw new ApplicationException("User not found");
